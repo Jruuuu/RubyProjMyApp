@@ -4,6 +4,6 @@
 
 <div>
 
-
-  <%= button_to "Destroy this article", @article, method: :delete %>
+<%= link_to "Show Articles", articles_path %>
+  <%= button_to "Destroy this article", @article,  method: :delete, onclick: "return confirm('Are you sure?')" %>
 </div>

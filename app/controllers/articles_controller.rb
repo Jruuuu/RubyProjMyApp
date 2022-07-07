@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :set_article, only: [ :show, :edit, :update, :destroy ]
 
   # GET /articles
   def index
@@ -8,7 +8,6 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
-    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
@@ -43,17 +42,17 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
-    redirect_to articles_url, notice: "Article was successfully destroyed."
+    redirect_to articles_path, notice: "Article was successfully destroyed."
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
+  private
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :description)
+    end
+
+    def set_article
+    @article = Article.find(params[:id])
     end
 end
