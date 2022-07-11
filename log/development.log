@@ -10695,3 +10695,31 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 3048)
 
 
+Started GET "/articles/15/edit" for ::1 at 2022-07-11 14:39:09 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.7ms | Allocations: 900)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1044)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1328)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 2223)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-11 14:44:00 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.5ms | Allocations: 1412)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1833)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 162)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2540)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 3940)
+
+
