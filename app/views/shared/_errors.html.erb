@@ -1,10 +1,10 @@
-<% if @article.errors.any? %>
+<% if obj.errors.any? %>
 <div class="alert alert-danger alert-dismissable fade show" role="alert">
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
   </button>
-  <h4 class="alert-heading"><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h4>
+  <h4 class="alert-heading"><%= pluralize(obj.errors.count, "error") %> prohibited this article from being saved:</h4>
   <ul>
-        <% @article.errors.each do |error| %>
+        <% obj.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

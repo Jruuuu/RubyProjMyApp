@@ -1,0 +1,24 @@
+<%= form_with(model: @user) do |f| %>
+  <%= render 'shared/errors', obj: @user %>
+  <div>
+    <%= f.label :username, style: "display: block" %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.email_field :email %>
+  </div>
+
+    <div>
+    <%= f.label :password, style: "display: block" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+<div class="mb-3">
+  <%= link_to '[ Cancel and return to articles ]', articles_path%>
+</div>

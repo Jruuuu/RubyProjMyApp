@@ -12233,3 +12233,1312 @@ Migrating to AddPasswordDigestToUsers (20220714203407)
   [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-07-14 20:37:48.107721"], ["password_digest", "[FILTERED]"], ["id", 4]]
   [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/signup" for ::1 at 2022-07-14 13:43:26 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/signup" for ::1 at 2022-07-14 13:45:24 -0700
+Processing by UsersController#new as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 661)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#new is missing a template for request formats: text/html):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:107:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/signup" for ::1 at 2022-07-14 13:47:22 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.6ms | Allocations: 107)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 411)
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 1263)
+Completed 200 OK in 18ms (Views: 15.1ms | Allocations: 2415)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 13:47:58 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 4.2ms | Allocations: 1362)
+  Rendered users/_form.html.erb (Duration: 7.1ms | Allocations: 1780)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2084)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2178)
+Completed 500 Internal Server Error in 23ms (Allocations: 3117)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass
+
+            @virtual_path = "shared/_errors";; if @article.errors.any? 
+                                                          ^^^^^^^):
+    1: <% if @article.errors.any? %>
+    2: <div class="alert alert-danger alert-dismissable fade show" role="alert">
+    3:   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    4:   </button>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 13:48:31 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 2.8ms | Allocations: 1310)
+  Rendered users/_form.html.erb (Duration: 4.5ms | Allocations: 1655)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1959)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2054)
+Completed 500 Internal Server Error in 14ms (Allocations: 3002)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass
+
+            @virtual_path = "shared/_errors";; if @article.errors.any? 
+                                                          ^^^^^^^):
+    1: <% if @article.errors.any? %>
+    2: <div class="alert alert-danger alert-dismissable fade show" role="alert">
+    3:   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    4:   </button>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 13:48:47 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.9ms | Allocations: 3910)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4215)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4309)
+Completed 500 Internal Server Error in 22ms (Allocations: 5248)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x00000000007530>
+
+    '.freeze;@output_buffer.append=( form.label :title, style: "display: block" );@output_buffer.safe_append='
+                                     ^^^^
+Did you mean?  for
+               fork):
+    1: 
+    2:   <div>
+    3:     <%= form.label :title, style: "display: block" %>
+    4:     <%= form.text_field :title %>
+    5:   </div>
+    6: 
+  
+app/views/users/_form.html.erb:3
+app/views/users/new.html.erb:4
+Started GET "/" for ::1 at 2022-07-14 13:49:06 -0700
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 332)
+  Rendered layouts/_messages.html.erb (Duration: 1.2ms | Allocations: 205)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1133)
+Completed 200 OK in 11ms (Views: 8.6ms | Allocations: 2016)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 13:49:07 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.7ms | Allocations: 243)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 83.2ms | Allocations: 26941)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | Allocations: 27240)
+Completed 200 OK in 107ms (Views: 85.3ms | ActiveRecord: 1.8ms | Allocations: 30392)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:49:09 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.3ms | Allocations: 229)
+  Rendered articles/_form.html.erb (Duration: 23.9ms | Allocations: 2514)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 28.0ms | Allocations: 2910)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 3221)
+Completed 200 OK in 40ms (Views: 30.6ms | ActiveRecord: 1.5ms | Allocations: 4586)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:54:55 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered articles/_form.html.erb (Duration: 5.1ms | Allocations: 1707)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2128)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2872)
+Completed 200 OK in 27ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 7789)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 13:56:53 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.9ms | Allocations: 220)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 36.8ms | Allocations: 15359)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 15639)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 1.0ms | Allocations: 16182)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:56:58 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered articles/_form.html.erb (Duration: 3.1ms | Allocations: 1019)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1163)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1454)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 2444)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 13:57:23 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.7ms | Allocations: 188)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 12318)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 13044)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.5ms | Allocations: 13959)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:57:26 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 3.6ms | Allocations: 221)
+  Rendered articles/_form.html.erb (Duration: 30.4ms | Allocations: 5681)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 33.4ms | Allocations: 5985)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 6073)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.2ms | Allocations: 7081)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artcles_path' for #<ActionView::Base:0x00000000008c00>
+
+  '.freeze;@output_buffer.append=( link_to '[ Cancel and return to articles ]', artcles_path);@output_buffer.safe_append='
+                                                                                ^^^^^^^^^^^^
+Did you mean?  articles_path
+               article_path):
+    15:   </div>
+    16: <% end %>
+    17: <div class="mb-3">
+    18:   <%= link_to '[ Cancel and return to articles ]', artcles_path%>
+    19: </div>
+  
+app/views/articles/_form.html.erb:18
+app/views/articles/edit.html.erb:4
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:57:36 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.9ms | Allocations: 224)
+  Rendered articles/_form.html.erb (Duration: 4.6ms | Allocations: 1715)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2123)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2865)
+Completed 200 OK in 20ms (Views: 11.5ms | ActiveRecord: 1.5ms | Allocations: 4278)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 13:57:43 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.9ms | Allocations: 184)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 12122)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 12396)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.7ms | Allocations: 12906)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 13:57:53 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 224)
+  Rendered articles/_form.html.erb (Duration: 6.1ms | Allocations: 1653)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2072)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2814)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4214)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 13:58:05 -0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2785)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x00000000008fe8>
+
+    @user = user.new
+            ^^^^
+Did you mean?  super):
+  
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/signup" for ::1 at 2022-07-14 13:58:24 -0700
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 4082)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4403)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4497)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 9216)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000009f88>
+
+            @virtual_path = "users/_form";article = local_assigns[:article]; article = article;;@output_buffer.append=  form_with(model: user) do |form| @output_buffer.safe_append='
+                                                                                                                                         ^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <%= render 'shared/errors' %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 13:59:59 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 14.8ms | Allocations: 5313)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 5616)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5710)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 6681)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000a140>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors' %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:03:36 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 13.8ms | Allocations: 5297)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 5600)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5694)
+Completed 500 Internal Server Error in 24ms (Allocations: 6657)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000a348>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors' %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:03:37 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 13.1ms | Allocations: 4954)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5038)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5126)
+Completed 500 Internal Server Error in 15ms (Allocations: 5584)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000a4d8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors' %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:05:12 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.6ms | Allocations: 226)
+  Rendered users/_form.html.erb (Duration: 15.3ms | Allocations: 5651)
+  Rendered users/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 5954)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 6048)
+Completed 500 Internal Server Error in 23ms (Allocations: 6940)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000a6b8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1:   <%= render 'shared/errors', obj: @user %>
+    2: <%= form_with(model: @user) do |form| %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+    5:     <%= form.text_field :username %>
+  
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:05:31 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 3920)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4223)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4317)
+Completed 500 Internal Server Error in 12ms (Allocations: 5280)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000a898>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: user) do |form| @output_buffer.safe_append='
+                                                                                    ^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:05:38 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 9.8ms | Allocations: 5298)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5601)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5695)
+Completed 500 Internal Server Error in 16ms (Allocations: 6658)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000aa28>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:06:11 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 17.8ms | Allocations: 5298)
+  Rendered users/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 5601)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5695)
+Completed 500 Internal Server Error in 29ms (Allocations: 6658)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000ac08>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |f| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:06:45 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 11.0ms | Allocations: 4562)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4865)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4959)
+Completed 500 Internal Server Error in 18ms (Allocations: 5922)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x0000000000ae38>
+
+    '.freeze;@output_buffer.append=( form.label :username, style: "display: block" );@output_buffer.safe_append='
+                                     ^^^^
+Did you mean?  for
+               fork):
+    1: <%= form_with(model: @users) do |f| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+    5:     <%= form.text_field :username %>
+    6:   </div>
+    7: 
+  
+app/views/users/_form.html.erb:4
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:07:40 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.0ms | Allocations: 3909)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 4212)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4306)
+Completed 500 Internal Server Error in 22ms (Allocations: 5269)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000b018>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: users) do |f| @output_buffer.safe_append='
+                                                                                    ^^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: users) do |f| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:07:47 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 9.5ms | Allocations: 3920)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4223)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4317)
+Completed 500 Internal Server Error in 17ms (Allocations: 5280)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000b1d0>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: user) do |f| @output_buffer.safe_append='
+                                                                                    ^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: user) do |f| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:07:54 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 11.8ms | Allocations: 3920)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4226)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4320)
+Completed 500 Internal Server Error in 18ms (Allocations: 5283)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000b360>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: user) do |form| @output_buffer.safe_append='
+                                                                                    ^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:08:18 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 11.4ms | Allocations: 5298)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 5601)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5695)
+Completed 500 Internal Server Error in 17ms (Allocations: 6658)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000b518>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= form.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:09:26 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.3ms | Allocations: 5298)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5601)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5695)
+Completed 500 Internal Server Error in 20ms (Allocations: 6658)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000b720>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: @user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= f.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:09:37 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 10.7ms | Allocations: 3920)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 4223)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4317)
+Completed 500 Internal Server Error in 26ms (Allocations: 5280)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000b900>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: user) do |form| @output_buffer.safe_append='
+                                                                                    ^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= f.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:09:41 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 10.3ms | Allocations: 3907)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 4210)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4304)
+Completed 500 Internal Server Error in 17ms (Allocations: 5267)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000ba90>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: users) do |form| @output_buffer.safe_append='
+                                                                                    ^^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: users) do |form| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= f.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:09:49 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 10.7ms | Allocations: 3907)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 4210)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4304)
+Completed 500 Internal Server Error in 17ms (Allocations: 5267)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000bc20>
+
+            @virtual_path = "users/_form";;@output_buffer.append=  form_with(model: users) do |f| @output_buffer.safe_append='
+                                                                                    ^^^^^
+Did you mean?  @user):
+    1: <%= form_with(model: users) do |f| %>
+    2:   <%= render 'shared/errors', obj: @user %>
+    3:   <div>
+    4:     <%= f.label :username, style: "display: block" %>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:09:56 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 22.0ms | Allocations: 6332)
+  Rendered users/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 6645)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 6739)
+Completed 500 Internal Server Error in 29ms (Allocations: 7702)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artcles_path' for #<ActionView::Base:0x0000000000be00>
+
+  '.freeze;@output_buffer.append=( link_to '[ Cancel and return to articles ]', artcles_path);@output_buffer.safe_append='
+                                                                                ^^^^^^^^^^^^
+Did you mean?  articles_path
+               article_path):
+    20:   </div>
+    21: <% end %>
+    22: <div class="mb-3">
+    23:   <%= link_to '[ Cancel and return to articles ]', artcles_path%>
+    24: </div>
+  
+app/views/users/_form.html.erb:23
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:10:08 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 5.5ms | Allocations: 1673)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1973)
+  Rendered layouts/_messages.html.erb (Duration: 1.1ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2717)
+Completed 200 OK in 17ms (Views: 14.1ms | Allocations: 3719)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:10:16 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_form.html.erb (Duration: 4.7ms | Allocations: 946)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1027)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1311)
+Completed 200 OK in 8ms (Views: 6.6ms | Allocations: 1776)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:10:18 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 947)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1028)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1312)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 1733)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:10:19 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_form.html.erb (Duration: 2.9ms | Allocations: 946)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1027)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1311)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 1717)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:10:37 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 435)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 837)
+Completed 500 Internal Server Error in 9ms (Allocations: 1733)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: @users) do |f| %>
+  <%= render 'shared/errors', obj: @user %>
+  <div>
+    <%= f.label :username, style: "display: block" %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.email_field :email %>
+  </div>
+
+    <div>
+    <%= f.label :password, style: "display: block" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+<div class="mb-3">
+  <%= link_to '[ Cancel and return to articles ]', @artcles_path(article)%>
+</div>
+
+):
+1:    <%= form_with(model: @users) do |f| %>
+2:      <%= render 'shared/errors', obj: @user %>
+3:      <div>
+4:        <%= f.label :username, style: "display: block" %>
+5:        <%= f.text_field :username %>
+6:      </div>
+7:    
+8:      <div>
+9:        <%= f.label :email, style: "display: block" %>
+10:        <%= f.email_field :email %>
+11:      </div>
+12:    
+13:        <div>
+14:        <%= f.label :password, style: "display: block" %>
+15:        <%= f.password_field :password %>
+16:      </div>
+17:    
+18:      <div>
+19:        <%= f.submit %>
+20:      </div>
+21:    <% end %>
+22:    <div class="mb-3">
+23:      <%= link_to '[ Cancel and return to articles ]', @artcles_path(article)%>
+24:    </div>
+  
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:10:45 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 424)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 728)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 823)
+Completed 500 Internal Server Error in 7ms (Allocations: 1781)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: @users) do |f| %>
+  <%= render 'shared/errors', obj: @user %>
+  <div>
+    <%= f.label :username, style: "display: block" %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.email_field :email %>
+  </div>
+
+    <div>
+    <%= f.label :password, style: "display: block" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+<div class="mb-3">
+  <%= link_to '[ Cancel and return to articles ]', @articles_path(article)%>
+</div>
+
+):
+1:    <%= form_with(model: @users) do |f| %>
+2:      <%= render 'shared/errors', obj: @user %>
+3:      <div>
+4:        <%= f.label :username, style: "display: block" %>
+5:        <%= f.text_field :username %>
+6:      </div>
+7:    
+8:      <div>
+9:        <%= f.label :email, style: "display: block" %>
+10:        <%= f.email_field :email %>
+11:      </div>
+12:    
+13:        <div>
+14:        <%= f.label :password, style: "display: block" %>
+15:        <%= f.password_field :password %>
+16:      </div>
+17:    
+18:      <div>
+19:        <%= f.submit %>
+20:      </div>
+21:    <% end %>
+22:    <div class="mb-3">
+23:      <%= link_to '[ Cancel and return to articles ]', @articles_path(article)%>
+24:    </div>
+  
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/_form.html.erb:23: syntax error, unexpected '(', expecting ')'
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2022-07-14 14:10:51 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.6ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 5.0ms | Allocations: 1671)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1971)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2713)
+Completed 200 OK in 15ms (Views: 13.0ms | Allocations: 3699)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:12:03 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 5.4ms | Allocations: 1637)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1937)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2679)
+Completed 200 OK in 15ms (Views: 12.5ms | Allocations: 3661)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 14:12:16 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.8ms | Allocations: 189)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 15200)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 15498)
+Completed 200 OK in 45ms (Views: 37.8ms | ActiveRecord: 1.9ms | Allocations: 17393)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:12:23 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered users/_form.html.erb (Duration: 2.5ms | Allocations: 933)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1014)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1298)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 1772)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 14:14:11 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.8ms | Allocations: 188)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 12316)
+  Rendered layouts/_messages.html.erb (Duration: 1.0ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 13042)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.5ms | Allocations: 13953)
+
+
+Started GET "/articles/15/edit" for ::1 at 2022-07-14 14:14:12 -0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.0ms | Allocations: 223)
+  Rendered articles/_form.html.erb (Duration: 4.8ms | Allocations: 1565)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1931)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2215)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.7ms | Allocations: 3399)
+
+
+Started GET "/articles" for ::1 at 2022-07-14 14:14:14 -0700
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered articles/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 11150)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 11424)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.6ms | Allocations: 11853)
+
+
+Started GET "/articles/new" for ::1 at 2022-07-14 14:14:15 -0700
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered articles/_form.html.erb (Duration: 2.0ms | Allocations: 933)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1195)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1479)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+Started POST "/articles" for ::1 at 2022-07-14 14:14:16 -0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "description"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 2.4ms | Allocations: 1773)
+  Rendered articles/_form.html.erb (Duration: 6.3ms | Allocations: 4879)
+  Rendered articles/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4995)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5289)
+Completed 422 Unprocessable Entity in 12ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 7343)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:14:51 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 1382)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1697)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2009)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 2766)
+
+
+Started POST "/signup" for ::1 at 2022-07-14 14:14:52 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/signup" for ::1 at 2022-07-14 14:16:24 -0700
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 1284)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1376)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1690)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 6297)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:16:58 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 5.0ms | Allocations: 2051)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2352)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3094)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 4137)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:17:06 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 2.1ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 6.2ms | Allocations: 1635)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1935)
+  Rendered layouts/_messages.html.erb (Duration: 1.2ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2677)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3666)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:17:10 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.3ms | Allocations: 225)
+  Rendered users/_form.html.erb (Duration: 5.3ms | Allocations: 1911)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2211)
+  Rendered layouts/_messages.html.erb (Duration: 1.3ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2953)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 3951)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:18:31 -0700
+Processing by UsersController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 1412)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1504)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1818)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 6393)
+
+
+Started GET "/signup" for ::1 at 2022-07-14 14:19:44 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_form.html.erb (Duration: 4.6ms | Allocations: 1168)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1249)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1533)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2016)
+
+
