@@ -16,7 +16,7 @@
   </div>
 
   <div>
-    <%= f.submit "Sign Up"  %>
+    <%= f.submit(@user.new_record? ?  "Sign Up" : "Update Account") %>
   </div>
 <% end %>
 <div class="mb-3">
